@@ -19,7 +19,7 @@ print(DragonLiName,taiWan) // 效率比OC的NSLog高,默认会有\n 换行符
 
 //1.可以设置 terminator: 换行指定 ,可以看到就自定义的换行符号;
 
-print(DragonLiName,taiWan,terminator:";")
+print(DragonLiName,taiWan,terminator:"     end")
 //2.设置分隔符 separator:
 print(DragonLiName,taiWan,separator:",,,",terminator:"")
 
@@ -77,8 +77,6 @@ let uintValue :UInt = 16
 typealias DragonLi1 = String
 let nameWho:DragonLi1 = "dragonLi"
 
-
-
 //字符和字符串
 
 let string1 = "DragonLi"
@@ -109,6 +107,7 @@ let charValue:Character = "Y"
 stringOne.append(charValue)
 
 //5类似OC的拼接 \ ()
+
 let ComString = "a new String \(stringOne)"
 
 //6.计算字符串数量
@@ -149,7 +148,6 @@ let isEqual = stringOne == stringM1 // 比较字面量
 
 stringM1.hasPrefix("1")
 stringOne.hasSuffix("1")
-
 
 
 
