@@ -21,6 +21,13 @@
  1. 01Constants, variables, strings
  2. 02.The dictionary, arrays, tuples
  3. 03.The basic operators, control flow, optional
+ 4. 04.Functions,enum
+ 5. 05.closures
+ 6. 06Class,Struct 
+ 7. 07 Attribute , inheritance
+ 8. 08The construction and destruction
+ 9. 09Optional even,Type conversion, nested types
+ 
 
 
 
