@@ -15,19 +15,21 @@
 *****************************************************************************
 
 
-##2016年05.29开始从OC转学swift记录,code 注释也都比较详细
+##2016年05.29开始从OC转学swift记录,到2016年06.01完成初步学习,后期做些demo和小项目巩固下,期待swift新版本发布!
 
 ## 2.1部分BaseSwiftCode list
- 1. 01Constants, variables, strings
- 2. 02.The dictionary, arrays, tuples
- 3. 03.The basic operators, control flow, optional
- 4. 04.Functions,enum
- 5. 05.closures
- 6. 06Class,Struct 
- 7. 07 Attribute , inheritance
- 8. 08The construction and destruction
- 9. 09Optional even,Type conversion, nested types
- 
+ 1. Constants, variables, strings
+ 2. The dictionary, arrays, tuples
+ 3. The basic operators, control flow, optional
+ 4. Functions,enum
+ 5. closures
+ 6. Class,Struct 
+ 7. Attribute , inheritance
+ 8. The construction and destruction
+ 9. Optional even,Type conversion, nested types
+ 10. Reference,Protocal
+ 11. Generic and accessControl
+ 12. Error and ProtocalPro
 
 
 
