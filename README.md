@@ -12,6 +12,8 @@
 	2.3 部分项目
 
 3.最终完成OC转swift	
+4.本页面会及时更新,喜欢的还望star,你的支持是我最大的努力!
+
 *****************************************************************************
 
 
@@ -32,6 +34,12 @@
  12. Error and ProtocalPro
 
 
+### 3. 有任何问题，请及时 issues me 
+ <dragonli_52171@163.com>   
+ 
 
+## License
+
+English: this library is available under the MIT license, see the LICENSE file for more information.   
 
 
