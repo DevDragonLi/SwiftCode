@@ -3,7 +3,7 @@
  */
 import UIKit
 
-let taiWanNumber = 1 // 不可修改
+let taiWanNumber = 666 // 不可修改
 
 var DragonLiName = "LFL"
 DragonLiName = "Dragon_Li"
