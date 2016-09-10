@@ -1,4 +1,4 @@
-//: Playground - noun: a place where people can play
+//:
 
 import UIKit
 //定义一个类,可以不继承NSObject.引用类型
@@ -21,7 +21,7 @@ class Person{
 }
 
 var draginLi = Person()
-draginLi.dynamicType
+//draginLi.dynamicType
 draginLi.name = "LFL"
 draginLi.age
 
@@ -70,7 +70,7 @@ struct Person1{
 }
 
 var draginLi1 = Person1()
-draginLi1.dynamicType
+//draginLi1.dynamicType
 draginLi1.name = "LFL"
 draginLi1.age
 

@@ -1,6 +1,15 @@
+
+//:swift从2.2到后期版本具体改变请参考代码注释部分和最新部分即可
 /*
- //16年05-29  swift 2.2    01
+ 16年05-29  swift 2.2    01
  */
+
+/*
+ //16年9-10  swift 3.0    01
+ */
+//: swift 3.0 dynamicType 过期,使用 type(of: 常/变量) 获取类型
+// :获取int类型size  print("int8Value: \(sizeof(Int8))") 变为 print("int8Value: \(MemoryLayout<Int8>.size)")
+
 import UIKit
 
 let taiWanNumber = 666 // 不可修改
@@ -12,8 +21,9 @@ DragonLiName = "Dragon_Li"
 let taiWan:Int = 1
 
 //实际上,自动推断类型,编译时类型检查
-taiWan.dynamicType  // Int.Type 
-DragonLiName.dynamicType
+type(of: taiWan)  // Int.Type 
+
+// DragonLiName.dynamicType   2.2版本
 
 print(DragonLiName,taiWan) // 效率比OC的NSLog高,默认会有\n 换行符
 
@@ -49,7 +59,9 @@ let int16Value:Int16 = 16
 let int64Value:Int64 = 16
 //可以打印对应的min 和max 查看对应的取值范围
 //Int64.max
-print("int8Value: \(sizeof(Int8))")
+// print("int8Value: \(sizeof(Int8))")
+ print("int8Value: \(MemoryLayout<Int8>.size)")
+
 //打印 占位 \()
 print("int:\(int8Value)")
 
@@ -118,8 +130,8 @@ let ComString = "a new String \(stringOne)"
 stringOne.startIndex
 stringOne.endIndex
 //获取下一个和前一个位置
-stringOne.startIndex.successor()
-stringOne.endIndex.predecessor()
+//stringOne.startIndex.successor()
+// stringOne.endIndex.predecessor()
 
 stringOne[stringOne.startIndex] // 返回对应字符 ,如果越界,会报错
 
@@ -130,17 +142,16 @@ for index in stringOne.characters.indices{
 var testString = "LFL Test"
 //插入删除,修改等
 
-testString.insert("!", atIndex: testString.startIndex)
+testString.insert("!", at: testString.startIndex)
 //加入字符串需要insertContentsOf("add".characters,对应插入位置)
-testString.insertContentsOf("add".characters, at: testString.endIndex)
+testString.insert(contentsOf: "add".characters, at: testString.endIndex)
 
-testString.removeAtIndex(testString.startIndex)
+testString.remove(at: testString.startIndex)
 
 //删除指定范围,这比较蛋疼啊 advancedBy 之前
 
-let range = testString.startIndex.successor()..<testString.startIndex.advancedBy(5)
-
-testString.removeRange(range)
+// let range = testString.startIndex.successor()..<testString.startIndex.advancedBy(5)
+//testString.removeSubrange(range)
 
 //字符串比较.是否包含某个字节的前缀和后缀
 
@@ -148,6 +159,3 @@ let isEqual = stringOne == stringM1 // 比较字面量
 
 stringM1.hasPrefix("1")
 stringOne.hasSuffix("1")
-
-
-

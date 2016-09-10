@@ -1,5 +1,7 @@
 // 6.12  2016 LFL
 //map 和 flatMap
+//:swift3后，将flatten()重命名为joined()
+
 
 import UIKit
 /// map
@@ -19,7 +21,7 @@ let resultString = numberArrarys.map { "LFL->\($0)" }
 
 print(resultString)
 
-resultString.dynamicType  // String数组
+// resultString.dynamicType  // String数组
 
 ///flatMap
 
@@ -96,7 +98,9 @@ imageNames.flatMap{ UIImage(named: $0) }
  result.append(newElement)
  }
  */
-
-
+//
+let numbers_1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+let joined = numbers_1.joined(separator: [-1, -2])
+print(Array(joined))
 
 

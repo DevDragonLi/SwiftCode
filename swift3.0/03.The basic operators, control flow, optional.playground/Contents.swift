@@ -1,4 +1,6 @@
-//: Playground - noun: a place where people can play
+
+//: 3.0后   % 使用英文remainder 取余
+
 
 import UIKit
 //1.和OC不同,swift赋值没有返回值,所以不可以 if a == b 这样判断
@@ -7,7 +9,7 @@ import UIKit
 var number1 = 5.5
 let number2 = 2.5
 
-number1 % number2 //实际上2.5 *2 + 0.5 = 5.5
+number1 .remainder(dividingBy: number2) //实际上2.5 *2 + 0.5 = 5.5
 //一元运算符
 +number2
 -number1
@@ -124,7 +126,6 @@ if ageNumber > 0{
 
 //可以使用可选取代if判断
 var agenumber1 :Optional<Int>
-agenumber1.dynamicType
 
 var ageNumber2 :Int?
 //强制解析(确定值存在,然后取值)

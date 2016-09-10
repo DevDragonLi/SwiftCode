@@ -1,7 +1,8 @@
 //  泛型   和   访问控制
+//:Swift3.0以后访问控制fileprivate和open
 import UIKit
 
-func swapTwoNumbers(inout num1:Int,inout num2 :Int)  {
+func swapTwoNumbers( num1:inout Int, num2 :inout Int)  {
     let temp = num1
     num1 = num2
     num2 = temp
@@ -10,11 +11,11 @@ func swapTwoNumbers(inout num1:Int,inout num2 :Int)  {
 
 var a = 10
 var b = 20
-swapTwoNumbers(&a, num2: &b)
+swapTwoNumbers(num1: &a, num2: &b)
 
 // 如果上述函数,是double ,字符串呢? 避免重复代码(推断类型,实际调用T被推断对应的类型)
 //格式<T> ,占位符
-func swapGens<T>(inout fristElement:T,inout secondElement:T)  {
+func swapGens<T>( fristElement:inout T, secondElement:inout T)  {
     let temp = fristElement
     fristElement = secondElement
     secondElement = temp
@@ -22,7 +23,7 @@ func swapGens<T>(inout fristElement:T,inout secondElement:T)  {
 }
 var name = "name"
 var age = "23"
-swapGens(&name, secondElement: &age) // 已经进行交换了
+swapGens(fristElement: &name, secondElement: &age) // 已经进行交换了
 
 //关联类型   associatedtype
 
@@ -51,6 +52,15 @@ struct nameClass<T> :namePro{
 //使用后期,可以应对不断变化的需求,初始化时候,<> 指定T的类型
 var test = nameClass<String>()
 
+// typealias支持泛型
+//:
+typealias StrOfDictionary<T> = Dictionary<String, T>
+// https://github.com/apple/swift-evolution/blob/master/proposals/0048-generic-typealias.md 具体参考
+
+
+
+
+
 //扩展泛型:
 extension nameClass{
     var top :T?{
@@ -63,11 +73,23 @@ func equeaFun<T :Equatable>(a:T,b:T) -> Bool {
     return a == b
 }
 
+
 //访问控制:控制其他源文件(swift文件)或者模块(独立单元构建和发布的framework或者application)对代码的访问级别
 //和OC类似  
-//1.public 最高级别
+// open，public，internal，fileprivate，private
+//1.open   public 通过open和public标记区别一个元素是只能被访问还是可以被override
 //2.internal  默认,也就是本模块内访问本源文件 (命名空间)
-//3.private  只能当前源文件访问  最低
+//3. private fileprivate 只能当前源文件访问  private是真正的私有
+/*
+ swift3.0以前中的 private其实并不是真正的私有，如果一个变量定义为private，在同一个文件中的其他类依然是可以访问到的。这个场景在使用extension的时候很明显
+ */
+
+ class TESTA {
+    
+    // 这个方法在任何地方都可以被override
+    open func openFuncatiion() {}
+    
+}
 
 //语法 对应关键字,加载类或者变量等前面即可
 private class privateClass{

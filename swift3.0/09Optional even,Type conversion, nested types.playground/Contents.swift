@@ -13,10 +13,10 @@ class Person {
 var person : Person? = Person()
 //强制解析
 var result =  person!.name
-result.dynamicType
+//result.dynamicType
 //可选连访问 .可选类型
 var result1 =  person?.name
-result1.dynamicType
+//result1.dynamicType
 
 //如果 ,初始化,直接(),可能强制解析直接出错,但是可选链不会
 
@@ -49,7 +49,7 @@ let movie = Movie(name: "movie")
 let media = Media(name: "media")
 
 let collection = [song,movie,media]
-collection.dynamicType // 识别到父类
+//collection.dynamicType // 识别到父类
 
 //1.类的类别判定
 media is Media  // 对象调取 is 后面类名 返回bool
@@ -75,7 +75,7 @@ extension Character {
         case Vowel, Consonant, Other
     }
     var kind: Kind {
-        switch String(self).lowercaseString {
+        switch String(self).lowercased() {
         case "a", "e", "i", "o", "u":
             return .Vowel
         case "b", "c", "d", "f", "g", "h", "j", "k", "l", "m",
@@ -106,7 +106,7 @@ func printLetterKinds(word: String) {
     }
     print("\n")
 }
-printLetterKinds("Hello")
+printLetterKinds(word: "Hello")
 
 
 //  extension  Int example

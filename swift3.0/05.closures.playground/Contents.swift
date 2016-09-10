@@ -22,8 +22,10 @@ func plus(a:Int,b:Int) -> Int {
 func mulitly(a:Int,b:Int) -> Int {
     return a * b
 }
+ // 函数类型的使用,-----闭包实现最后参数?
+caculate(a: 3, 7, mulitly)
 
-caculate(3, 7, mulitly)  // 函数类型的使用,-----闭包实现最后参数?
+// caculate(3, 7, mulitly)  2.2 已过期
 
 //  
 let plusClosure = {
@@ -31,31 +33,30 @@ let plusClosure = {
     return a + b
 }
 //查看类型 ,和函数一样
-plusClosure.dynamicType
-
-caculate(2, 10, plusClosure)
+caculate(a: 2, 10, plusClosure)
+// caculate(2, 10, plusClosure) 2.2 已过期
 
 let mulityClousure = {
     (a:Int ,b:Int) ->Int in
     return a * b
 }
 
-caculate(3, 6, mulityClousure)
+caculate(a: 3, 6, mulityClousure)
 
 // 上面闭包和写函数一致,匿名呢
-caculate(5, 5, {  (a:Int ,b:Int) ->Int in return a * b })
+caculate(a: 5, 5, {  (a:Int ,b:Int) ->Int in return a * b })
 
 //因为swift 类型推断,闭包特性:根据上下文推断类型,简写
-caculate(5, 5, {  (a ,b) in  a * b })
+caculate(a: 5, 5, {  (a ,b) in  a * b })
 
 // 默认 $1,$2
-caculate(5, 5, {$0 + $1})
+caculate(a: 5, 5, {$0 + $1})
 
 //运算符函数 ,少到没朋友
-caculate(5, 5,  + )
+caculate(a: 5, 5,  + )
 
 //2.尾随闭包
-caculate(5, 5){$0 + $1}
+caculate(a: 5, 5){$0 + $1}
 
 //捕获值
 
@@ -68,12 +69,12 @@ func increasefun(num:Int) -> () ->Int {
     return funDetail
 }
 
-let numberWhat = increasefun(20)
+let numberWhat = increasefun(num: 20)
 //每次调用都会把内部的number 增加
 numberWhat()  // 20
 numberWhat()  // 40
 
-let numberWhat2 = increasefun(10)
+let numberWhat2 = increasefun(num: 10)
 //每次调用都会把内部的number 增加
 numberWhat2()  // 10
 numberWhat2()  // 20

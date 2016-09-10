@@ -94,14 +94,14 @@ brid.fly()
 
 //          协议可以作为类型使用
 var aprotocal :flyProtocal = brid // 把brid
-aprotocal.dynamicType  // 类型还是flppyBird.Type,因为遵守协议后是混合体
+type(of: aprotocal)  // 类型还是flppyBird.Type,因为遵守协议后是混合体
 
 //作为函数参数类型
 func printFun(fly:flyProtocal)  {
-    print(flyProtocal)
+    print(flyProtocal.self)
 }
 
-printFun(brid) //
+printFun(fly: brid) //
 
 //作为集合类型,
 
@@ -114,7 +114,7 @@ class nameClass:flyProtocal {
 var name = nameClass()
 //
 let arrary :[flyProtocal] = [brid,name]
-arrary.dynamicType // 集合类型
+type(of: arrary) // 集合类型
 
 
 

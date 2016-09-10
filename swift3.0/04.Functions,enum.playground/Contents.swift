@@ -1,4 +1,6 @@
 
+//:3.0后,参数:类型 不可略去  inout 实际失去意义
+
 //16.05.29 下午
 import UIKit
 
@@ -8,13 +10,13 @@ func helloSwift(name:String) -> String {
     return "\(name)"
 }
 
-helloSwift("DragonLi")
+helloSwift(name: "DragonLi")
 
 func opterion(num:Int ,num2:Int ) -> Int {
     return num + num2
 }
 
-opterion(7, num2: 5) // 第二个开始形参不可以去掉
+opterion(num: 7, num2: 5) // 第二个开始形参不可以去掉
 
 //多个返回值 // 返回元祖
 func square(num:Double) -> (posSqrt:Double,negSqtr:Double) {
@@ -24,17 +26,17 @@ func square(num:Double) -> (posSqrt:Double,negSqtr:Double) {
     return(posSqrt,negSqtr)
 }
 
-let (x,y) = square(3)
+let (x,y) = square(num: 3)
 
 //指定函数形参名字
-func test1(name name:String){
+func test1(name:String){
     print(name)
 }
 
 test1(name: "DragonLi")
 
 // 如果函数参数和返回都一样,使用inout 简写
-func swapNnmber ( inout num1:Int ,inout num2:Int){
+func swapNnmber ( num1:inout Int , num2:inout Int){
     let tempValue = num1
     num1 = num2
     num2 = tempValue
@@ -55,7 +57,7 @@ func average(num:Int...) -> Int {
     return total / (num.count)
 }
 
-average(10,12,13,18)
+average(num: 10,12,13,18)
 
 /*
  函数类型,swift中函数和其他值类型一样,可以赋值,作为函数参数和返回值返回
@@ -73,8 +75,9 @@ func multiplyNumber(num1:Int ,num2:Int) -> Int {
 
 //,可以直接赋值
 var mathFunc = addNumber
-mathFunc.dynamicType
- mathFunc(1,num2: 3)
+//mathFunc.dynamicType
+
+ mathFunc(1,3)
 
 //进阶\
 
@@ -90,7 +93,7 @@ func chooseFunc(what:Bool) -> (Int) ->Int {
     return what ? add : dive
 }
 //调用后返回对应函数
-let resultFunc =  chooseFunc(true)
+let resultFunc =  chooseFunc(what: true)
 
 resultFunc(2)
 
@@ -111,7 +114,7 @@ func chooseFunc1(what:Bool) -> backType{
    return  what ? add2 : dive2
 }
 
-let funChooseWhat = chooseFunc1(true)
+let funChooseWhat = chooseFunc1(what: true)
 funChooseWhat(2)   // 3
 
 
@@ -126,7 +129,7 @@ enum frame{
 }
 
 var frameDir = frame.y
-    frameDir.dynamicType
+    //frameDir.dynamicType
 
 frameDir = .width  // 已知类型
 
