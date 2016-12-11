@@ -1,16 +1,14 @@
 
-//:swift从2.2到后期版本具体改变请参考代码注释部分和最新部分即可
-/*
- 16年05-29  swift 2.2    01
- */
-
-/*
- //16年9-10  swift 3.0    01
- */
+//:swift具体版本差异改变请参考代码注释部分和最新部分即可
 //: swift 3.0 dynamicType 过期,使用 type(of: 常/变量) 获取类型
 // :获取int类型size  print("int8Value: \(sizeof(Int8))") 变为 print("int8Value: \(MemoryLayout<Int8>.size)")
+// 16年05-29  swift 2.2    01
+//16年9-10  swift 3.0
+
+
 
 import UIKit
+//: 自动推导 - 会根据等号右侧类型-推断变量/常量的类型
 
 let taiWanNumber = 666 // 不可修改
 
@@ -89,7 +87,7 @@ let uintValue :UInt = 16
 typealias DragonLi1 = String
 let nameWho:DragonLi1 = "dragonLi"
 
-//字符和字符串
+//:字符和字符串
 
 let string1 = "DragonLi"
 let string2 = String("hello")
@@ -106,7 +104,7 @@ stringM1 = String("New string Value") // 可以再次赋值
 
 //函数和重新修改,是copy ,保证函数或者方法中改字符串不被修改,和当前的值,也就是说,只有真正修改数值,和新对象产生,才会修改,优化性能
 
-//3获取字符串的字符
+//3获取字符串的字符---遍历
 for char in stringM1.characters{
     print(char)
 }
@@ -118,13 +116,13 @@ var stringOne = String(charSets)
 let charValue:Character = "Y"
 stringOne.append(charValue)
 
-//5类似OC的拼接 \ ()
+//5类似OC的拼接 \ (变量/常量.可选项需要解包下不然出现Optional)
 
 let ComString = "a new String \(stringOne)"
 
 //6.计算字符串数量
-    ComString.characters.count
-    emptyString.characters.count
+    ComString.characters.count              //返回字符串的个数
+    ComString.lengthOfBytes(using: .utf8)  // 返回对应编码的字节长度
 
 //string .index(不是整数索引)  索引
 stringOne.startIndex
@@ -159,3 +157,39 @@ let isEqual = stringOne == stringM1 // 比较字面量
 
 stringM1.hasPrefix("1")
 stringOne.hasSuffix("1")
+
+//:格式化时间等
+//:
+let hour = 9
+let min = 3
+let formatDate = String(format: "%02d:%02d", hour,min)
+print(formatDate)
+
+//:取到子字符串
+let stringSub = "这个是测试取子字符串的"
+            //1.转化为OC的字符串
+let strSub = stringSub as NSString
+
+print(strSub .substring(with: NSMakeRange(0, 3)))
+
+//2.swift3.0版本
+let rangeSwift = stringSub.range(of: "测试")  // 可选类型
+
+let swiftSubStr = stringSub.substring(with:rangeSwift!)
+print("=======")
+print(swiftSubStr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -27,10 +27,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let buttonLFL = UIButton.init(type: .custom)  // TODO:改下枚举类型
+        buttonLFL.setTitle("DragonLi", for: .normal)
         buttonLFL.backgroundColor = UIColor.red
         buttonLFL.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
         view .addSubview(buttonLFL)
         buttonLFL .addTarget(self, action: #selector(buttonLFLClick), for: .touchUpInside)
+        guardTest(name: "DragonLi", age: 25)
     }
     // button action method
     func buttonLFLClick(){
@@ -38,11 +40,26 @@ class ViewController: UIViewController {
         print(#function)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    /// guard － 是和 if let 刚好相反的指令 Swift 2.0 推出的语法
+    // 开发中,使用相同名变量接收,后面使用的便是非空值,不需要强制解包
+    func guardTest(name:String?,age:Int?) {
         
+        guard let name = name , let age = age else {
+          print("可能存在nil")
+           return
+        }
+        print(name + String(age))
+//        guard let nameLi = name else {
+//            print("name 为 nil")
+//            return
+//        }
+//        
+//        guard let ageBoy = age else {
+//            print("age 为 nil")
+//            return
+//        }
+        // 代码执行到此,name 和 age 一定有值
+        // 使用 guard 会让嵌套层次少一层！
     }
-
-
 }
 

@@ -1,10 +1,7 @@
 
-//:3.0后,参数:类型 不可略去  inout 实际失去意义
-
-//16.05.29 下午
 import UIKit
-
-//函数名,形参类型 返回值类型
+//16.05.29 下午
+//:定义函数名,形参类型 返回值类型
 
 func helloSwift(name:String) -> String {
     return "\(name)"
@@ -15,7 +12,7 @@ helloSwift(name: "DragonLi")
 func opterion(num:Int ,num2:Int ) -> Int {
     return num + num2
 }
-
+//: 1.0版本省去形参名,2.0第一个省去,3.0开始全部不可略去  inout 实际失去意义
 opterion(num: 7, num2: 5) // 第二个开始形参不可以去掉
 
 //多个返回值 // 返回元祖
@@ -117,10 +114,13 @@ func chooseFunc1(what:Bool) -> backType{
 let funChooseWhat = chooseFunc1(what: true)
 funChooseWhat(2)   // 3
 
-
-
-
-//      枚举 和OC不同,默认没有初始值的
+//: 如果写方法可以定义一个最全的,可以随意组合.后期写框架(可以参考SDWebImage的扩展方法)
+func testDefault(num1:Int = 10,num2:Int = 20)->Int{
+    return num1 + num2
+}
+testDefault()
+testDefault(num1: 10, num2: 30)
+//:      枚举 和OC不同,默认没有初始值的
 enum frame{
     case x
     case y

@@ -10,7 +10,7 @@ emptyArrary = [Int]()
 // emptyArrary = [Int](count:3,repeatedValue:0) 2.2后废弃
 var kkkkkkk = [2,2,2,2,]
 
-//添加新数组
+//添加新数组,每次增加,如果当前空间不够,会追加当前空间*2 (预分配空间,优化性能)
 var combinArrary = emptyArrary + kkkkkkk
 combinArrary[0]
 
@@ -44,9 +44,17 @@ for (index ,value) in combinArrary.enumerated(){
 combinArrary.count
 combinArrary.isEmpty
 
+// enum block 遍历
+for element in combinArrary.enumerated(){
+    print(element)
+}
+
+//: 反序遍历 ---enumerated + reversed,保持正确
+for re in combinArrary.enumerated().reversed(){
+    print(re)
+}
 
 //          set (元素必须可以哈希化)
-var setString:Set<String> = Set()
 
 var sets1111 = Set([1,2,2]) // 不可以重复的
 //删除
@@ -73,11 +81,18 @@ sets1111.isSubset(of: sets222)
 sets222.isSuperset(of: sets1111) // 是否全部包含
 sets222.isDisjoint(with: sets1111) // 
 
-//字典和元祖
+//:字典和元祖
 let dictEmpty = Dictionary<String,String>()
 let dictOne = [Int:Int]()
 
 var dictTest = ["LFL":"twenty","DraginLi":"boy"]
+
+// 定义 字典数组  [String:AnyObject]
+let dicArray = [
+    ["name":"DragonLi","age":25],
+    ["name":"DragonLi","age":2]
+]
+print(dicArray)
 
 dictTest["LFL"]
 // 如果没有,会输出nil
@@ -96,6 +111,14 @@ for (key ,value) in dictTest{
 for value in dictTest.values{
     print(value)
 }
+
+// 字典的合并,需要遍历,如果key不存在会新增
+var dictTest2 = ["LFL":"twenty","DraginLi":"boy"]
+
+for element in dictTest{
+    dictTest2[element.key] = dictTest[element.value]
+}
+print(dictTest2)
 
 //  元祖  使用()直接赋值内容
 

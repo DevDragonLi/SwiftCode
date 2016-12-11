@@ -1,8 +1,13 @@
 
 //: 3.0后   % 使用英文remainder 取余
 
-
 import UIKit
+
+/// for 循环 反转
+for i in (0...10).reversed(){
+    print(i)   // 输出10 .9 .8...0
+}
+
 //1.和OC不同,swift赋值没有返回值,所以不可以 if a == b 这样判断
 //加法支持string
 "LFL" + "DragonLi"
@@ -134,6 +139,9 @@ if num != nil{
     print(num!) // 20
 }
 
+//: 报错! unexpectedly found nil while unwrapping an Optional value
+// 每次写 ! 的时候，要考虑 nil!
+
 //可选绑定
 let possibleNumber = "100"
 if let numberR = Int(possibleNumber){
@@ -146,9 +154,11 @@ print(stringTest) // 是string
 let stringTest2 = stringTest
 
 
-
-
-
+// ?? 操作符号，可以判断之前的变量是否为 nil，如果为 nil，使用后面的替换 ?? 运算符号优先级`低`
+let nameDragonLi: String?
+    nameDragonLi = nil
+// 会输出"??default"
+print((nameDragonLi ?? "??default"))
 
 
 
