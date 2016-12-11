@@ -1,15 +1,20 @@
 
 import UIKit
 
-//  闭包 :自包含的函数代码块,函数是闭包的一种类型
-//1.闭包表达式语法
+//: Swift中闭包类似于OC的block :自包含的函数代码块,
+// OC中block是匿名的函数,Swift中函数是特殊的闭包(函数是闭包的一种类型)!
+//1.闭包表达式语法:  in 在实现代码前面分割 (其他等同于函数形式)
 /*
  {
  (parameters) ->return Type  in
- code
+    code
  }
  */
-//类似于函数,可以理解为匿名函数,(内联闭包)
+
+//1.1 最简单的闭包  closuresEasy: () -> ()  无参数无返回值
+let closuresEasy = {
+    print("so easy Dragonli")
+}
 
 func caculate(a:Int,_ b:Int, _ operation : (Int,Int) ->Int) -> Int {
     return operation(a,b)
@@ -36,6 +41,8 @@ let plusClosure = {
 caculate(a: 2, 10, plusClosure)
 // caculate(2, 10, plusClosure) 2.2 已过期
 
+
+
 let mulityClousure = {
     (a:Int ,b:Int) ->Int in
     return a * b
@@ -43,10 +50,10 @@ let mulityClousure = {
 
 caculate(a: 3, 6, mulityClousure)
 
-// 上面闭包和写函数一致,匿名呢
+// 上面闭包和写函数一致
 caculate(a: 5, 5, {  (a:Int ,b:Int) ->Int in return a * b })
 
-//因为swift 类型推断,闭包特性:根据上下文推断类型,简写
+//: 因为swift 类型推断,闭包特性:根据上下文推断类型,简写
 caculate(a: 5, 5, {  (a ,b) in  a * b })
 
 // 默认 $1,$2
@@ -57,6 +64,7 @@ caculate(a: 5, 5,  + )
 
 //2.尾随闭包
 caculate(a: 5, 5){$0 + $1}
+
 
 //捕获值
 

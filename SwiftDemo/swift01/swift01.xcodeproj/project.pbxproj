@@ -12,6 +12,7 @@
 		8772C3101DFAF7D1001D8EA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8772C30E1DFAF7D1001D8EA1 /* Main.storyboard */; };
 		8772C3121DFAF7D1001D8EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8772C3111DFAF7D1001D8EA1 /* Assets.xcassets */; };
 		8772C3151DFAF7D1001D8EA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8772C3131DFAF7D1001D8EA1 /* LaunchScreen.storyboard */; };
+		87B6CEFC1DFDDF8500E35A20 /* DragonLi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B6CEFB1DFDDF8500E35A20 /* DragonLi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8772C3111DFAF7D1001D8EA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8772C3141DFAF7D1001D8EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8772C3161DFAF7D1001D8EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87B6CEFB1DFDDF8500E35A20 /* DragonLi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DragonLi.swift; path = ../../../../../../LFL/Desktop/swiftSmpleCode/SwiftDemo/swift01/swift01/DragonLi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				8772C30A1DFAF7D1001D8EA1 /* AppDelegate.swift */,
 				8772C30C1DFAF7D1001D8EA1 /* ViewController.swift */,
+				87B6CEFB1DFDDF8500E35A20 /* DragonLi.swift */,
 				8772C30E1DFAF7D1001D8EA1 /* Main.storyboard */,
 				8772C3111DFAF7D1001D8EA1 /* Assets.xcassets */,
 				8772C3131DFAF7D1001D8EA1 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B6CEFC1DFDDF8500E35A20 /* DragonLi.swift in Sources */,
 				8772C30D1DFAF7D1001D8EA1 /* ViewController.swift in Sources */,
 				8772C30B1DFAF7D1001D8EA1 /* AppDelegate.swift in Sources */,
 			);

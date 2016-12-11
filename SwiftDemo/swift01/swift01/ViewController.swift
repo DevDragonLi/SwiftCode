@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         view .addSubview(buttonLFL)
         buttonLFL .addTarget(self, action: #selector(buttonLFLClick), for: .touchUpInside)
         guardTest(name: "DragonLi", age: 25)
+        
+        // 测试闭包
+        
     }
     // button action method
     func buttonLFLClick(){
@@ -61,5 +64,14 @@ class ViewController: UIViewController {
         // 代码执行到此,name 和 age 一定有值
         // 使用 guard 会让嵌套层次少一层！
     }
+    
+    // MARK: 闭包: 数据传递回调
+    
+    
+    
+    
+    
+    
+    
 }
 
