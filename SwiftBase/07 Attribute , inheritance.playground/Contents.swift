@@ -5,7 +5,6 @@ import UIKit
  存储属性 :enum 没有 ,类似OC的成员变量,可以指定默认值,,可以修改
  计算属性: 间接获取和设置其他属性的值(类似OC的getter 和setter)
  类型属性
- 
  */
 struct lengthRc {
     var frist :Int
@@ -16,7 +15,7 @@ var lengthP = lengthRc(frist: 10,secind: 20)
 lengthP.frist = 20
 //lengthP.secind = 30  //
 
-//1  lazy stored pro: 初始值在第一次使用才计算
+//:  lazy stored pro: 初始值在第一次使用才计算
 /*
  格式: lazy 属性 = { 返回对应的属性}()
  */

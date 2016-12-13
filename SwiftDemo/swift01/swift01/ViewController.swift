@@ -23,6 +23,18 @@ import UIKit
 //3.viewDidLoad 类似OC的#pram 等
 class ViewController: UIViewController {
     
+    // MARK:懒加载  解除解包的麻烦,延迟创建 懒加载本质是一个闭包
+    lazy var label :UILabel = UILabel()
+    // 懒加载只调用一次
+    // 完整
+    lazy var label1 = { () -> UILabel in
+        let laztLabel = UILabel()
+   // 类似OC设置属性等....
+
+        return laztLabel
+    }()
+    
+    
     // MARK:viewDidLoad生命周期
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +46,9 @@ class ViewController: UIViewController {
         buttonLFL .addTarget(self, action: #selector(buttonLFLClick), for: .touchUpInside)
         guardTest(name: "DragonLi", age: 25)
         
-        // 测试闭包
+        
+        let testLabel = UILabel (fontSize: 20, frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        print(testLabel)
         
     }
     // button action method
@@ -64,12 +78,6 @@ class ViewController: UIViewController {
         // 代码执行到此,name 和 age 一定有值
         // 使用 guard 会让嵌套层次少一层！
     }
-    
-    // MARK: 闭包: 数据传递回调
-    
-    
-    
-    
     
     
     

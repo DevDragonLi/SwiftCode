@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871C979D1DFEF177009ED146 /* UILabelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871C979C1DFEF177009ED146 /* UILabelHelper.swift */; };
 		8772C30B1DFAF7D1001D8EA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8772C30A1DFAF7D1001D8EA1 /* AppDelegate.swift */; };
 		8772C30D1DFAF7D1001D8EA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8772C30C1DFAF7D1001D8EA1 /* ViewController.swift */; };
 		8772C3101DFAF7D1001D8EA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8772C30E1DFAF7D1001D8EA1 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		871C979C1DFEF177009ED146 /* UILabelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabelHelper.swift; path = ../../../../../../LFL/Desktop/swiftSmpleCode/SwiftDemo/swift01/swift01/UILabelHelper.swift; sourceTree = "<group>"; };
 		8772C3071DFAF7D1001D8EA1 /* swift01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8772C30A1DFAF7D1001D8EA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8772C30C1DFAF7D1001D8EA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				8772C30A1DFAF7D1001D8EA1 /* AppDelegate.swift */,
 				8772C30C1DFAF7D1001D8EA1 /* ViewController.swift */,
 				87B6CEFB1DFDDF8500E35A20 /* DragonLi.swift */,
+				871C979C1DFEF177009ED146 /* UILabelHelper.swift */,
 				8772C30E1DFAF7D1001D8EA1 /* Main.storyboard */,
 				8772C3111DFAF7D1001D8EA1 /* Assets.xcassets */,
 				8772C3131DFAF7D1001D8EA1 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871C979D1DFEF177009ED146 /* UILabelHelper.swift in Sources */,
 				87B6CEFC1DFDDF8500E35A20 /* DragonLi.swift in Sources */,
 				8772C30D1DFAF7D1001D8EA1 /* ViewController.swift in Sources */,
 				8772C30B1DFAF7D1001D8EA1 /* AppDelegate.swift in Sources */,

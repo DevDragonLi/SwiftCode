@@ -2,7 +2,7 @@
 
 import UIKit
 ///////////////////////// Class   /////////////////////////
-//构造和析构 swift 构造器无返回值(保证每个对象第一次使用前完成正确的初始化)
+//: 构造和析构 swift 构造器无返回值(保证每个对象第一次使用前完成正确的初始化)
 class DraginLi {
     var name :String
     var age : Int
@@ -14,10 +14,17 @@ class DraginLi {
         self.gender = gender
     }
     
-//    类的便利构造器 : convenience
+//: 2.0-3.0版本写法  类的便利构造器 : convenience 含有这个关键词则负责创建对象
     convenience init(name:String){
         self.init(name:name,age: 0,gender: "")
     }
+//: 3.0 开始,可以不加convenience 便利构造器可以返回nil,节省内存开销
+//    init?(name:String) {
+//        if name.isEmpty {
+//           return nil
+//        }
+//    self.init()
+//    }
 }
 
 //let dragonLi = DraginLi()  默认是无参数的构造器

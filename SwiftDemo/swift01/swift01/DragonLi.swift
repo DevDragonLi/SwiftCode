@@ -4,7 +4,7 @@
 //
 //  Created by DragonLi on 2016/12/12.
 //  Copyright © 2016年 DragonLi. All rights reserved.
-//
+//      运行时获取当前属性
 
 import UIKit
 
