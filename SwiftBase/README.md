@@ -1,5 +1,7 @@
  
 #Swift  
+
+
 1. Constants, variables, strings
 2. The dictionary, arrays, tuples
 3. The basic operators, control flow, optional

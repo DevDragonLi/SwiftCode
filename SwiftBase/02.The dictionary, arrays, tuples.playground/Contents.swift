@@ -72,8 +72,8 @@ let outvalue = sets222.symmetricDifference(sets1111) //(二个集合去掉相同
 
 let unionvalue = sets222.union(sets1111) //(并集)
 
-let subtractvalue = sets222.subtract(sets1111) //(叉集)
-print(subtractvalue)
+//let subtractvalue = sets222.subtract(sets1111) //(叉集)
+//print(subtractvalue)
 
 sets1111.isEmpty
 //MARK:改变 (of:  (with:

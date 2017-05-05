@@ -2,10 +2,8 @@
 //:swift具体版本差异改变请参考代码注释部分和最新部分即可
 //: swift 3.0 dynamicType 过期,使用 type(of: 常/变量) 获取类型
 // :获取int类型size  print("int8Value: \(sizeof(Int8))") 变为 print("int8Value: \(MemoryLayout<Int8>.size)")
-// 16年05-29  swift 2.2    01
-//16年9-10  swift 3.0
-
-
+// 16年05-29  swift 2.2
+// 16年09-10  swift 3.0
 
 import UIKit
 //: 自动推导 - 会根据等号右侧类型-推断变量/常量的类型
@@ -34,19 +32,12 @@ print(DragonLiName,taiWan,separator:",,,",terminator:"")
 // 1.base number
 
 /*
- 整形 有符号
- Int
- Int8
- Int16
- Int32
- Int64
-无符号
- Uint
- uint
- UInt8
- UInt16
- UInt32
- UInt64
+ 有符号          无符号
+ Int            Uint
+ Int8           UInt8
+ Int16          UInt16
+ Int32          UInt32
+ Int64          UInt64
  */
 //区别
 // 内存占用空间 sizeof获取,数据范围不同
@@ -146,7 +137,7 @@ testString.insert(contentsOf: "add".characters, at: testString.endIndex)
 
 testString.remove(at: testString.startIndex)
 
-//删除指定范围,这比较蛋疼啊 advancedBy 之前
+//删除指定范围, advancedBy 之前
 
 // let range = testString.startIndex.successor()..<testString.startIndex.advancedBy(5)
 //testString.removeSubrange(range)
@@ -177,18 +168,8 @@ let rangeSwift = stringSub.range(of: "测试")  // 可选类型
 
 let swiftSubStr = stringSub.substring(with:rangeSwift!)
 print("=======")
+
 print(swiftSubStr)
-
-
-
-
-
-
-
-
-
-
-
 
 
 
