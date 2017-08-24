@@ -1,19 +1,24 @@
-# swiftSmpleCode
+# SwiftSmpleCode
+						
+- 苹果14年发布swift,从最初的1.0,1.2到现在的2.2已经成熟不少,所以决定从2.2开始学习下swift,后期更新3.0,4.0等,对应代码我会有时间更新code部分.
+
+- 本页面会不断更新,喜欢的还望star,你的支持是我最大的努力!
+
+- **[SwiftBaseCode](#SwiftBase)**
+- **[SwiftDemoList](#SwiftDemoList)**
+- **[Related_documentation](#Related_documentation)**
 
 
-*****************************************************************************
 
-								前言 								
-1.苹果14年发布swift,从最初的1.0,1.2到现在的2.2已经成熟不少,所以决定从2.2开始学习下swift,后期更新3.0,4.0等,对应代码我会有时间更新code部分.
+## <a name="SwiftDemoList"></a> SwiftDemoList
 
-2.本页面会不断更新,喜欢的还望star,你的支持是我最大的努力!
-*****************************************************************************
+- **TableViewDemo**
 
 
 
-##Swift基本语法和更新详细见SwiftBase文件夹
 
-#### 1.1BaseSwiftCodeplayground list 
+
+## <a name="SwiftBase"></a>Swift Basic
  
  1. Constants, variables, strings
  
@@ -42,13 +47,16 @@
  13. MapAndFlatMap 
 
 
-##相关文档资料
+## <a name="Related_documentation"></a>Related_documentation
+
 
 - Swift官方《The Swift Programming Language》[地址](https://swift.org/documentation/#the-swift-programming-language )
 
 - Apple的 iBooksStore里面阅读[地址](https://itunes.apple.com/us/book/the-swift-programming-language/id1002622538?mt=11)
 
-##有任何问题，请及时 issues me `dragonli_52171@163.com `
+
+
+## 有任何问题，请及时 issues me `dragonli_52171@163.com `
  
 ## License
 

@@ -17,7 +17,7 @@
 13. swiftOperation/MapAndFlatMap!
 
 
-##Swift版本更新记录
+##Swift3.0更新记录
 
 	-Swift取消了预编译指令.
 	-舍弃OC的Smalltalk的语法,改为点语法.
