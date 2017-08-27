@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870B52FE1F531ACB003E1C39 /* LFLBlockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870B52FD1F531ACB003E1C39 /* LFLBlockVC.swift */; };
 		8751B2121F4C139F00272ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8751B2111F4C139F00272ED6 /* AppDelegate.swift */; };
 		8751B2141F4C139F00272ED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8751B2131F4C139F00272ED6 /* ViewController.swift */; };
 		8751B2191F4C139F00272ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8751B2181F4C139F00272ED6 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		870B52FD1F531ACB003E1C39 /* LFLBlockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFLBlockVC.swift; sourceTree = "<group>"; };
 		8751B20E1F4C139E00272ED6 /* TableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8751B2111F4C139F00272ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8751B2131F4C139F00272ED6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				8751B2111F4C139F00272ED6 /* AppDelegate.swift */,
 				8751B2131F4C139F00272ED6 /* ViewController.swift */,
+				870B52FD1F531ACB003E1C39 /* LFLBlockVC.swift */,
 				876FB82C1F4C305D00541E26 /* SampleTableViewCell.swift */,
 				876FB82E1F4C306600541E26 /* project */,
 				8751B21D1F4C139F00272ED6 /* Info.plist */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8751B2141F4C139F00272ED6 /* ViewController.swift in Sources */,
+				870B52FE1F531ACB003E1C39 /* LFLBlockVC.swift in Sources */,
 				876FB82D1F4C305D00541E26 /* SampleTableViewCell.swift in Sources */,
 				8751B2121F4C139F00272ED6 /* AppDelegate.swift in Sources */,
 			);

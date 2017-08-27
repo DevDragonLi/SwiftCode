@@ -58,6 +58,11 @@ extension ViewController : UITableViewDataSource ,UITableViewDelegate{
         if indexPath.row == 3 {  // click item
             showTip()
         } else {
+            let closureVC = LFLBlockVC()
+            closureVC.stringBlock = {
+             print($0)
+            }
+           self.present(closureVC, animated: true, completion: nil)
             print(sourceDatas[indexPath.row])
         }
     }
