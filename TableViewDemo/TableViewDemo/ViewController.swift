@@ -8,7 +8,7 @@
 
 import UIKit
 
-let cellID = "cellID"
+let cellID = "SampleTableViewCell"
 
 class ViewController: UIViewController {
     
@@ -18,9 +18,11 @@ class ViewController: UIViewController {
         let tableView = UITableView(frame: CGRect(x: 0, y: 74, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         tableView.backgroundColor = .white
         tableView.tableHeaderView = UIView()
-//        tableView.tableFooterView = UIView()
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none;
-        tableView.register(SampleTableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
+        tableView.tableFooterView = UIView()
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine;
+//        tableView.register(SampleTableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
+        
+        tableView.register(UINib(nibName: "SampleTableViewCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.delegate = self
         tableView.dataSource = self
         return tableView
@@ -51,7 +53,7 @@ class ViewController: UIViewController {
 extension ViewController : UITableViewDataSource ,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
-        return 50;
+        return 120;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -68,8 +70,14 @@ extension ViewController : UITableViewDataSource ,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let  cell  = SampleTableViewCell.init(style: .default, reuseIdentifier:cellID)
-        cell.textLabel?.text = "\(indexPath.row + 1)" + "." + "\(sourceDatas[indexPath.row])"
+         // code style cell
+         /*
+         let  cell  = SampleTableViewCell.init(style: .default, reuseIdentifier:cellID)
+         cell.textLabel?.text = "\(indexPath.row + 1)" + "." + "\(sourceDatas[indexPath.row])"
+         return cell
+         */
+        let cell  = tableView.dequeueReusableCell(withIdentifier: cellID) as! SampleTableViewCell
+        cell.headerImageView?.image = UIImage(named: "testPic")
         return cell
     }
     
