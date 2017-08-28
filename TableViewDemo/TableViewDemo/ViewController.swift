@@ -77,10 +77,11 @@ extension ViewController : UITableViewDataSource ,UITableViewDelegate{
          return cell
          */
         let cell  = tableView.dequeueReusableCell(withIdentifier: cellID) as! SampleTableViewCell
-        cell.headerImageView?.image = UIImage(named: "testPic")
+//        cell.headerImageView?.image = UIImage(named: "testPic")
+        cell.headerImageView.image = UIImage.initImage(named: "testPic", size: cell.headerImageView.frame.size)
+        cell.headerImageView.contentMode = .scaleAspectFit
         return cell
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sourceDatas.count
     }
