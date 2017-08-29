@@ -1,4 +1,7 @@
 # SwiftSmpleCode
+			
+- **当前版本: Swift4.0**				
+			
 						
 - 苹果14年发布swift,从最初的1.0,1.2到现在的2.2已经成熟不少,所以决定从2.2开始学习下swift,后期更新3.0,4.0等,对应代码我会有时间更新code部分.
 
@@ -21,6 +24,11 @@
 	- CustomeView 
 	- delegate
 	- clourse  
+
+- **AlamofireDemo**
+	
+	- Alamofire
+		
 
 
 
