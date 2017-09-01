@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Photos
+//import Photos
 
 private let LFLANIMATEDURATION = 0.3
 
@@ -19,13 +19,16 @@ extension UIImageView {
         self.isUserInteractionEnabled = true
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapAction)))
     }
-    @objc private func saveCurrentImageClick()  {
-       // 保存目前有苹果的新 API问题,后期完善
-        
-        
+    @objc fileprivate func saveCurrentImageClick()  {
+        // 保存:目前有苹果的新 API问题,后期Photos 处理
+        UIImageWriteToSavedPhotosAlbum(self.image!, self, #selector(imageSave(image:didFinishSavingWithError:contextInfo:)), nil)
     }
-   
-    @objc private func dismissAction(tap:UITapGestureRecognizer)  {
+    
+  @objc fileprivate  func imageSave(image:UIImage,didFinishSavingWithError error:NSError?,contextInfo:AnyObject) {
+        // tips
+    }
+
+    @objc fileprivate func dismissAction(tap:UITapGestureRecognizer)  {
         let backgroundView = tap.view
         UIView.animate(withDuration: LFLANIMATEDURATION, animations: {
             backgroundView?.viewWithTag(1111)?.frame = originFrame
@@ -33,7 +36,7 @@ extension UIImageView {
             backgroundView?.removeFromSuperview()
         }
     }
-    @objc private  func handleTapAction()  {
+    @objc fileprivate  func handleTapAction()  {
         
         let window = UIApplication.shared.keyWindow
         let backgroundView = UIView(frame:UIScreen.main.bounds)
@@ -61,7 +64,7 @@ extension UIImageView {
         
         UIView.animate(withDuration: LFLANIMATEDURATION) {
             var yValue:CGFloat,width:CGFloat,Height :CGFloat = 0
-            yValue = (UIScreen.main.bounds.height - self.image!.size.height * UIScreen.main.bounds.width / self.image!.size.width) * 0.5
+            yValue = UIScreen.main.bounds.height - self.image!.size.height * (UIScreen.main.bounds.width / self.image!.size.width) * 0.5
             width = UIScreen.main.bounds.width;
             Height = UIScreen.main.bounds.height - self.image!.size.height * (UIScreen.main.bounds.width / self.image!.size.width)
             showImageView.frame = CGRect(x: 0, y: yValue, width: width, height: Height)
