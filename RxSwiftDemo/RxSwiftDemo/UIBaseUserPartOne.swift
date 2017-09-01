@@ -8,8 +8,8 @@
 
 import UIKit
 
-import RxCocoa
 import RxSwift
+import RxCocoa
 
 class UIBaseUserPartOne: UIViewController{
     
@@ -32,6 +32,11 @@ extension  UIBaseUserPartOne {
         btn.setTitleColor(UIColor.brown, for: .normal)
         view.addSubview(btn)
         
+//        btn.addTarget(self, action: #selector(method_Handle), for: .touchUpInside)
+        btn.rx.tap.subscribe { (event:Event<()>) in
+          print(Event.ElementType)
+        }.addDisposableTo(bag)
+    
         btn.rx.tap.subscribe(onNext: { () in
             print("click Button")
         }, onError: { (error) in
