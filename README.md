@@ -10,6 +10,9 @@
 - **[SwiftBaseCode](#SwiftBase)**
 - **[SwiftDemoList](#SwiftDemoList)**
 - **[Related_documentation](#Related_documentation)**
+- **[Swift_Note](#Swift_Note)**
+
+
 
 
 
@@ -37,11 +40,11 @@
 
 
 
+## <a name="Swift_Note"></a> Swift_Note
+
+- [base](./note/base.md)
 
 
-
-	
-		
 
 
 
@@ -73,7 +76,6 @@
  12. Error and ProtocalPro
 
  13. MapAndFlatMap 
-
 
 ## <a name="Related_documentation"></a>Related_documentation
 
