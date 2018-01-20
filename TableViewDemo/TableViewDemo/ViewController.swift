@@ -12,8 +12,8 @@ let cellID = "SampleTableViewCell"
 
 class ViewController: UIViewController {
     
-    var sourceDatas = [String]()
-    
+    fileprivate  var sourceDatas = [String]()
+    fileprivate var loadPageDatas = [String]()
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect(x: 0, y: 74, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         tableView.backgroundColor = .white
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         navigationItem.title = "tableViewDemo"
         view.addSubview(tableView)
-        sourceDatas = ["LFL","DragonLi","tableView","Do not Click item"]
+        sourceDatas = ["LFL","DragonLi","tableView","Do not Click item","LFL","DragonLi","tableView","Do not Click item","LFL","DragonLi","tableView","Do not Click item"]
         tableView.reloadData()
     }
     
@@ -51,6 +51,20 @@ class ViewController: UIViewController {
 
 //MARK:UITableView Delegates
 extension ViewController : UITableViewDataSource ,UITableViewDelegate{
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let total = scrollView.contentSize.height
+        let current = scrollView.contentOffset.y + UIScreen.main.bounds.height
+        let page = "1"    // 计算当前下拉页码
+        if loadPageDatas .contains(page) == false  && total - current  < 100{
+            loadPageDatas.append(page)
+              preLoading()
+        }
+    }
+
+    func preLoading() {
+        print("request Networking")
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return 120;
