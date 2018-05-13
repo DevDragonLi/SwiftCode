@@ -3,7 +3,7 @@ target 'RxSwiftDemo' do
 use_frameworks!
 inhibit_all_warnings!
 
-pod 'RxSwift', '~> 4.0.0-alpha.1'
-pod 'RxCocoa', '~> 4.0.0-alpha.1'
+pod 'RxSwift', '~> 4.1.2'
+pod 'RxCocoa', '~> 4.1.2'
 
 end

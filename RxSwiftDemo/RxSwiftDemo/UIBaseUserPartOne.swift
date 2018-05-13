@@ -16,6 +16,9 @@ class UIBaseUserPartOne: UIViewController{
     lazy var bag:DisposeBag = {
         return DisposeBag()
     }()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonDemo()
@@ -33,16 +36,17 @@ extension  UIBaseUserPartOne {
         view.addSubview(btn)
         
 //        btn.addTarget(self, action: #selector(method_Handle), for: .touchUpInside)
-        btn.rx.tap.subscribe { (event:Event<()>) in
-          print(Event.ElementType)
-        }.addDisposableTo(bag)
-    
+//        btn.rx.tap.subscribe { (event:Event<()>) in
+//          print(Event.ElementType)
+//        }.addDisposableTo(bag)
+        
         btn.rx.tap.subscribe(onNext: { () in
             print("click Button")
         }, onError: { (error) in
         }, onCompleted: {
-        }).addDisposableTo(bag)
+        }).disposed(by: bag)
     }
+    
 }
 
 
