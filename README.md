@@ -1,8 +1,14 @@
-# SwiftSmpleCode
-			
-- **当前版本: Swift4.0**				
-			
-						
+# SwiftCode
+
+
+ [![star this repo](http://githubbadges.com/star.svg?user=DevDragonLi&repo=SwiftCode)](http://github.com/DevDragonLi/SwiftCode)
+ [![fork this repo](http://githubbadges.com/fork.svg?user=DevDragonLi&repo=SwiftCode)](http://github.com/DevDragonLi/SwiftCode/fork)
+
+## Stargazers over time
+
+[![Stargazers over time](https://starcharts.herokuapp.com/DevDragonLi/SwiftCode.svg)](https://starcharts.herokuapp.com/DevDragonLi/SwiftCode)
+
+					
 - 苹果14年发布swift,从最初的1.0,1.2到现在的2.2已经成熟不少,所以决定从2.2开始学习下swift,后期更新3.0,4.0等,对应代码我会有时间更新code部分.
 
 - 本页面会不断更新,喜欢的还望star,你的支持是我最大的努力!
@@ -11,8 +17,6 @@
 - **[SwiftDemoList](#SwiftDemoList)**
 - **[Related_documentation](#Related_documentation)**
 - **[Swift_Note](#Swift_Note)**
-
-
 
 
 
