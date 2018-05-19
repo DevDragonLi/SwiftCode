@@ -1,8 +1,14 @@
 # SwiftCode
-
-
+</p>
  [![star this repo](http://githubbadges.com/star.svg?user=DevDragonLi&repo=SwiftCode)](http://github.com/DevDragonLi/SwiftCode)
  [![fork this repo](http://githubbadges.com/fork.svg?user=DevDragonLi&repo=SwiftCode)](http://github.com/DevDragonLi/SwiftCode/fork)
+<img src="https://img.shields.io/badge/build-passing-brightgreen.svg">
+<img src="https://img.shields.io/badge/platform-iOS-ff69b4.svg">
+<img src="https://img.shields.io/badge/language-Swift-abcdef.svg">
+<img src="https://img.shields.io/badge/PR-welcome%20!-brightgreen.svg?colorA=a0cd34">
+<img src="https://img.shields.io/packagist/l/doctrine/orm.svg">
+<img src="https://img.shields.io/github/last-commit/google/skia.svg">
+</p>
 
 ## Stargazers over time
 
