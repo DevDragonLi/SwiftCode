@@ -42,7 +42,7 @@ extension UIImage {
         }
         let resultTarget = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return resultTarget
+        return resultTarget   // 60 * 50 
     }
     
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQP-IA-GQl">
-                        <rect key="frame" x="280" y="38" width="268" height="75.5"/>
+                        <rect key="frame" x="280" y="41" width="268" height="70"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="268" id="fOi-Fn-Y5S"/>
                         </constraints>
@@ -39,10 +39,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tad-nA-vwx">
-                        <rect key="frame" x="15" y="43" width="55" height="55"/>
+                        <rect key="frame" x="15" y="43" width="74" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="55" id="R2f-D4-2PT"/>
-                            <constraint firstAttribute="height" constant="55" id="fEK-x7-P3N"/>
+                            <constraint firstAttribute="width" constant="74" id="R2f-D4-2PT"/>
+                            <constraint firstAttribute="height" constant="50" id="fEK-x7-P3N"/>
                         </constraints>
                     </imageView>
                 </subviews>
