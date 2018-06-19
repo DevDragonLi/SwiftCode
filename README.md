@@ -1,7 +1,7 @@
 # SwiftCode
+
 </p>
- [![star this repo](http://githubbadges.com/star.svg?user=DevDragonLi&repo=SwiftCode)](http://github.com/DevDragonLi/SwiftCode)
- [![fork this repo](http://githubbadges.com/fork.svg?user=DevDragonLi&repo=SwiftCode)](http://github.com/DevDragonLi/SwiftCode/fork)
+<p align='left'>
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg">
 <img src="https://img.shields.io/badge/platform-iOS-ff69b4.svg">
 <img src="https://img.shields.io/badge/language-Swift-abcdef.svg">
@@ -10,20 +10,12 @@
 <img src="https://img.shields.io/github/last-commit/google/skia.svg">
 </p>
 
-## Stargazers over time
-
-[![Stargazers over time](https://starcharts.herokuapp.com/DevDragonLi/SwiftCode.svg)](https://starcharts.herokuapp.com/DevDragonLi/SwiftCode)
-
-					
-- 苹果14年发布swift,从最初的1.0,1.2到现在的2.2已经成熟不少,所以决定从2.2开始学习下swift,后期更新3.0,4.0等,对应代码我会有时间更新code部分.
-
-- 本页面会不断更新,喜欢的还望star,你的支持是我最大的努力!
+> Apple `2014`年发布`Swift`
 
 - **[SwiftBaseCode](#SwiftBase)**
 - **[SwiftDemoList](#SwiftDemoList)**
 - **[Related_documentation](#Related_documentation)**
 - **[Swift_Note](#Swift_Note)**
-
 
 
 ## <a name="SwiftDemoList"></a> SwiftDemoList
@@ -49,17 +41,14 @@
 - **RxSwiftDemo**	
 
 
-
 ## <a name="Swift_Note"></a> Swift_Note
 
-- [base](./note/base.md)
+- [base](./SwiftNote/base.md)
 
 
-
-
-
-
-## <a name="SwiftBase"></a>Swift Basic
+## <a name="SwiftBase"></a> Swift playground_Code 
+ 
+> [playground_Code](./playground_Code)
  
  1. Constants, variables, strings
  
@@ -96,7 +85,9 @@
 
 
 
-## 有任何问题，请及时 issues me `dragonli_52171@163.com `
+## 有任何问题，请及时 issues me 
+
+> dragonli_52171@163.com 
  
 ## License
 
