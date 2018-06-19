@@ -8,10 +8,11 @@
 
 import Alamofire
 
-private let testAPIURL = "http://api.budejie.com/api/api_open.php?a=list&c=data"
 
 class RequestTool {
-    
+
+    private let testAPIURL = "http://api.budejie.com/api/api_open.php?a=list&c=data"
+
     /// load test demo datas
     ///
     /// - Parameter complete: callblock
