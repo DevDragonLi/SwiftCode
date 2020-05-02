@@ -12,11 +12,11 @@ var stringValue = "110222196211067134"
 
 var resultValue = stringValue .ISLegalIDCardNumber()
 
-print("是不是大陆身份证\(resultValue)")
+print("110222196211067134:是不是大陆身份证\(resultValue)")
 
 stringValue = "1709011869_"
 
 resultValue = stringValue .ISLegalForPhoneNumber()
 
-print("是不是手机号\(resultValue)")
+print("1709011869_:是不是手机号\(resultValue)")
 

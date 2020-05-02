@@ -26,12 +26,13 @@ extension UIImageView {
     
   @objc fileprivate  func imageSave(image:UIImage,didFinishSavingWithError error:NSError?,contextInfo:AnyObject) {
         // tips
+        print(contextInfo)
     }
 
     @objc fileprivate func dismissAction(tap:UITapGestureRecognizer)  {
         let backgroundView = tap.view
         UIView.animate(withDuration: LFLANIMATEDURATION, animations: {
-            backgroundView?.viewWithTag(1111)?.frame = originFrame
+            backgroundView?.viewWithTag(1024)?.frame = originFrame
         }) { (complete) in
             backgroundView?.removeFromSuperview()
         }
@@ -40,12 +41,12 @@ extension UIImageView {
         
         let window = UIApplication.shared.keyWindow
         let backgroundView = UIView(frame:UIScreen.main.bounds)
-        backgroundView.backgroundColor = UIColor.black
+        backgroundView.backgroundColor = UIColor.white
         backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissAction(tap:))))
         originFrame = self.convert(self.bounds, to: window)
         
         let showImageView  = UIImageView(frame: originFrame)
-        showImageView.tag = 1111
+        showImageView.tag = 1024
         showImageView.image = self.image
         
         let saveButton = UIButton(type: .custom)
@@ -64,9 +65,9 @@ extension UIImageView {
         
         UIView.animate(withDuration: LFLANIMATEDURATION) {
             var yValue:CGFloat,width:CGFloat,Height :CGFloat = 0
-            yValue = UIScreen.main.bounds.height - self.image!.size.height * (UIScreen.main.bounds.width / self.image!.size.width) * 0.5
-            width = UIScreen.main.bounds.width;
             Height = UIScreen.main.bounds.height - self.image!.size.height * (UIScreen.main.bounds.width / self.image!.size.width)
+            yValue = 300
+            width = UIScreen.main.bounds.width;
             showImageView.frame = CGRect(x: 0, y: yValue, width: width, height: Height)
         }
     }

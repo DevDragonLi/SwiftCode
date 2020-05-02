@@ -28,7 +28,7 @@ extension String {
         var result = ""
         let regex = try! NSRegularExpression(pattern: patternString, options: regexOptions)
         // - 3、开始匹配
-        let res = regex.matches(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count))
+        let res = regex.matches(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count))
         // 输出结果
         for checkingRes in res {
             result = result + (self as NSString).substring(with: checkingRes.range)

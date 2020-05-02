@@ -96,7 +96,7 @@ stringM1 = String("New string Value") // 可以再次赋值
 //函数和重新修改,是copy ,保证函数或者方法中改字符串不被修改,和当前的值,也就是说,只有真正修改数值,和新对象产生,才会修改,优化性能
 
 //3获取字符串的字符---遍历
-for char in stringM1.characters{
+for char in stringM1{
     print(char)
 }
 
@@ -112,7 +112,7 @@ stringOne.append(charValue)
 let ComString = "a new String \(stringOne)"
 
 //6.计算字符串数量
-    ComString.characters.count              //返回字符串的个数
+    ComString.count              //返回字符串的个数
     ComString.lengthOfBytes(using: .utf8)  // 返回对应编码的字节长度
 
 //string .index(不是整数索引)  索引
@@ -125,7 +125,7 @@ stringOne.endIndex
 stringOne[stringOne.startIndex] // 返回对应字符 ,如果越界,会报错
 
 //如此遍历,获取对应字符
-for index in stringOne.characters.indices{
+for index in stringOne.indices{
     print(index,stringOne[index])
 }
 var testString = "LFL Test"
@@ -133,7 +133,7 @@ var testString = "LFL Test"
 
 testString.insert("!", at: testString.startIndex)
 //加入字符串需要insertContentsOf("add".characters,对应插入位置)
-testString.insert(contentsOf: "add".characters, at: testString.endIndex)
+testString.insert(contentsOf: "add", at: testString.endIndex)
 
 testString.remove(at: testString.startIndex)
 

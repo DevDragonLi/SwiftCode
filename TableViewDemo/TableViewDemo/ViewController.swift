@@ -19,15 +19,15 @@ class ViewController: UIViewController {
         tableView.backgroundColor = .white
         tableView.tableHeaderView = UIView()
         tableView.tableFooterView = UIView()
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine;
-//        tableView.register(SampleTableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
-        
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine;
+//  tableView.register(SampleTableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
+
         tableView.register(UINib(nibName: "SampleTableViewCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.delegate = self
         tableView.dataSource = self
         return tableView
     }()
-
+    
     override func viewDidLoad() {
         navigationItem.title = "tableViewDemo"
         view.addSubview(tableView)
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     func showTip() {
         
         let tip  = UIAlertController(title: "Click Tips", message: "why are you Click this item", preferredStyle: .alert)
-       
+        
         let diss = UIAlertAction(title: "Wrong operation", style: .default) { (action) in
         }
         let sure = UIAlertAction(title: "continue operation", style:.cancel) { (action) in
@@ -58,12 +58,12 @@ extension ViewController : UITableViewDataSource ,UITableViewDelegate{
         let page = "1"    // 计算当前下拉页码
         if loadPageDatas .contains(page) == false  && total - current  < 100{
             loadPageDatas.append(page)
-              preLoading()
+            preLoading()
         }
     }
-
+    
     func preLoading() {
-        print("request Networking")
+        print("request NextPage Networking doing ")        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
@@ -76,22 +76,22 @@ extension ViewController : UITableViewDataSource ,UITableViewDelegate{
         } else {
             let closureVC = LFLBlockVC()
             closureVC.stringBlock = {
-             print($0)
+                print($0)
             }
-           self.present(closureVC, animated: true, completion: nil)
+            self.present(closureVC, animated: true, completion: nil)
             print(sourceDatas[indexPath.row])
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         // code style cell
-         /*
+        // code style cell
+        /*
          let  cell  = SampleTableViewCell.init(style: .default, reuseIdentifier:cellID)
          cell.textLabel?.text = "\(indexPath.row + 1)" + "." + "\(sourceDatas[indexPath.row])"
          return cell
          */
         let cell  = tableView.dequeueReusableCell(withIdentifier: cellID) as! SampleTableViewCell
-//        cell.headerImageView?.image = UIImage(named: "testPic")
+        // cell.headerImageView?.image = UIImage(named: "testPic")
         cell.headerImageView.image = UIImage.initImage(named: "testPic", size: cell.headerImageView.frame.size)
         return cell
     }

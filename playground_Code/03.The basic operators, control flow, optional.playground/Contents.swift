@@ -149,7 +149,7 @@ if let numberR = Int(possibleNumber){
 }
 //隐式解析可选类型 (已经确定肯定有值,声明时候指定 !)
 let stringTest :String! = "aaaaaaaaa"
-print(stringTest) // 是string
+print(stringTest ?? "") // 是string
 
 let stringTest2 = stringTest
 

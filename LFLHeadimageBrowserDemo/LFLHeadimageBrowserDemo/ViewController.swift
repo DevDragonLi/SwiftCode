@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var headImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // handleTapImageView 
         headImageView.handleTapBrower()
     }
 }

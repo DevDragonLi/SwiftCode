@@ -10,6 +10,8 @@ emptyArrary = [Int]()
 // emptyArrary = [Int](count:3,repeatedValue:0) 2.2后废弃
 var kkkkkkk = [2,2,2,2,]
 
+
+
 //添加新数组,每次增加,如果当前空间不够,会追加当前空间*2 (预分配空间,优化性能)
 var combinArrary = emptyArrary + kkkkkkk
 combinArrary[0]
