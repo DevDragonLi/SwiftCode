@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
     
     func customViewDemo()  {
-        let customView = LFLCustomView(labelTitle:"广州恒大", Buttontitle: "click -鸟细砂岩", frame:  CGRect(x: 0, y: 65, width:UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.32))
+        let customView = LFLCustomView(labelTitle:"广州恒大", Buttontitle: "click -鸟细砂岩", frame:  CGRect(x: 0, y: 100, width:UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.32))
         customView.tapButtonClosure = {
            // Closure handle action
             print("second part of closure\($0)")
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController:CustomViewtTapButtonDelegate {
+extension ViewController:CustomViewTapButtonDelegate {
     
     func buttonClickAction()  {
         print("VC get tap action with delegate")
