@@ -8,7 +8,7 @@
 
 import UIKit
 
-let cellID = "SampleTableViewCell"
+fileprivate let cellID = "SampleTableViewCell"
 
 class ViewController: UIViewController {
     
@@ -19,9 +19,9 @@ class ViewController: UIViewController {
         tableView.backgroundColor = .white
         tableView.tableHeaderView = UIView()
         tableView.tableFooterView = UIView()
-        tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine;
-//  tableView.register(SampleTableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
-
+        tableView.separatorStyle = .singleLine;
+        //  tableView.register(SampleTableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
+        
         tableView.register(UINib(nibName: "SampleTableViewCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.delegate = self
         tableView.dataSource = self
@@ -90,6 +90,7 @@ extension ViewController : UITableViewDataSource ,UITableViewDelegate{
          cell.textLabel?.text = "\(indexPath.row + 1)" + "." + "\(sourceDatas[indexPath.row])"
          return cell
          */
+        
         let cell  = tableView.dequeueReusableCell(withIdentifier: cellID) as! SampleTableViewCell
         // cell.headerImageView?.image = UIImage(named: "testPic")
         cell.headerImageView.image = UIImage.initImage(named: "testPic", size: cell.headerImageView.frame.size)

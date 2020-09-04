@@ -17,8 +17,6 @@ class UIBaseUserPartOne: UIViewController{
         return DisposeBag()
     }()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonDemo()
@@ -43,7 +41,9 @@ extension  UIBaseUserPartOne {
         btn.rx.tap.subscribe(onNext: { () in
             print("click Button")
         }, onError: { (error) in
+        
         }, onCompleted: {
+        
         }).disposed(by: bag)
     }
     

@@ -1,7 +1,8 @@
-# Swift note
+# Swift Note
 
 - **Swift**中声明方法
-  - fileprivate 当前类读取(3.0开始) override 重写父类
+  - fileprivate 当前类读取(3.0开始) 
+  - override 重写父类
   - func methodName (参数名: type )
   
 ```

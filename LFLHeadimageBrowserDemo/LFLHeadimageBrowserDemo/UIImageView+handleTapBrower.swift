@@ -20,15 +20,14 @@ extension UIImageView {
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapAction)))
     }
     @objc fileprivate func saveCurrentImageClick()  {
+        
         // 保存:目前有苹果的新 API问题,后期Photos 处理
         UIImageWriteToSavedPhotosAlbum(self.image!, self, #selector(imageSave(image:didFinishSavingWithError:contextInfo:)), nil)
     }
-    
-  @objc fileprivate  func imageSave(image:UIImage,didFinishSavingWithError error:NSError?,contextInfo:AnyObject) {
+    @objc fileprivate  func imageSave(image:UIImage,didFinishSavingWithError error:NSError?,contextInfo:AnyObject) {
         // tips
-        print(contextInfo)
     }
-
+    
     @objc fileprivate func dismissAction(tap:UITapGestureRecognizer)  {
         let backgroundView = tap.view
         UIView.animate(withDuration: LFLANIMATEDURATION, animations: {
@@ -48,6 +47,7 @@ extension UIImageView {
         let showImageView  = UIImageView(frame: originFrame)
         showImageView.tag = 1024
         showImageView.image = self.image
+        showImageView.contentMode = .scaleAspectFit
         
         let saveButton = UIButton(type: .custom)
         saveButton.frame = CGRect(x: UIScreen.main.bounds.width / 2.0 - 25, y: UIScreen.main.bounds.height - 60, width: 50, height: 25)

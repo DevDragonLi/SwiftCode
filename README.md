@@ -45,6 +45,7 @@
 
 - **RxSwiftDemo**	
 
+- **RegularExpressionDemo**
 
 ## <a name="Swift_Note"></a> Swift_Note
 

@@ -99,6 +99,7 @@
 				TargetAttributes = {
 					8787570D1F590F6B007800BA = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -281,12 +282,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HD29GU94HU;
+				DEVELOPMENT_TEAM = FNCPC67LST;
 				INFOPLIST_FILE = LFLHeadimageBrowserDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = juejin.im.LFLHeadimageBrowserDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -295,12 +296,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HD29GU94HU;
+				DEVELOPMENT_TEAM = FNCPC67LST;
 				INFOPLIST_FILE = LFLHeadimageBrowserDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = juejin.im.LFLHeadimageBrowserDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

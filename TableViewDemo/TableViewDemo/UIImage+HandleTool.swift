@@ -25,6 +25,7 @@ extension UIImage {
     /// - Returns: handle image
   class  func initImage(named name: String,size:CGSize, cornerRadius:Bool = true,backColor: UIColor = UIColor.white, lineColor: UIColor = UIColor.lightGray) -> UIImage? {
         let rect = CGRect(origin: CGPoint(), size: size)
+    
         guard let iamgeValue =  UIImage(named: name) else { return nil }
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
         

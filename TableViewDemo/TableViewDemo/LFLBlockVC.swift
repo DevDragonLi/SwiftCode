@@ -15,6 +15,7 @@ class LFLBlockVC: UIViewController {
     
     override func viewDidLoad() {
         view.backgroundColor = .gray
+        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
            self.async_method(complte: { (stringValue) in
                print(stringValue)
