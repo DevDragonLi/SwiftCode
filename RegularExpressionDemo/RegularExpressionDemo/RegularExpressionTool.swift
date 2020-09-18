@@ -9,22 +9,24 @@
 import Foundation
 
 extension String {
-
+    
     /// 身份证正则
     ///
     /// - Returns: boolValue
-    func ISLegalIDCardNumber() -> Bool {
-        return globalConfig(patternString:"(^[0-9]{15}$)|([0-9]{17}([0-9]|[X])$)", regexOptions: NSRegularExpression.Options.dotMatchesLineSeparators)
+    func isLegalIDCardNumber() -> Bool {
+        // 15位
+        // 18位 （末尾可能存在X）
+        return regularExpression(patternString:"(^[0-9]{15}$)|([0-9]{17}([0-9]|[X])$)", regexOptions: NSRegularExpression.Options.dotMatchesLineSeparators)
     }
     
     /// 手机号正则
     ///
     /// - Returns: boolValue
     func ISLegalForPhoneNumber() -> Bool {
-      return globalConfig(patternString:  "1[0-9]{10}", regexOptions: NSRegularExpression.Options.caseInsensitive)
+        return regularExpression(patternString:  "1[0-9]{10}", regexOptions: NSRegularExpression.Options.caseInsensitive)
     }
     
-    fileprivate  func globalConfig(patternString:String,regexOptions:NSRegularExpression.Options) -> Bool {
+    fileprivate  func regularExpression(patternString:String,regexOptions:NSRegularExpression.Options) -> Bool {
         var result = ""
         let regex = try! NSRegularExpression(pattern: patternString, options: regexOptions)
         // - 3、开始匹配
@@ -33,13 +35,13 @@ extension String {
         for checkingRes in res {
             result = result + (self as NSString).substring(with: checkingRes.range)
         }
-        if result == self{
+        if result == self {
             return true
         }else{
             return false
         }
     }
- 
+    
 }
 /*
  1. options 正则表达式的选项
