@@ -23,7 +23,10 @@
 - **[Swift_Note](#Swift_Note)**
 
 
-## <a name="SwiftDemoList"></a> SwiftDemoList
+## <a name="SwiftDemoList"></a> SwiftProjects
+
+- **iPadSplitScreenKit**
+	- [iPad 分屏基础组件](https://github.com/Todaycoding/iPadSplitScreenKit)
 
 - **TableViewDemo**
 	- clourse  
