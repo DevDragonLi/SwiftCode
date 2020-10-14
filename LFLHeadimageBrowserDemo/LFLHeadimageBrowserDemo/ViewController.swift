@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var headImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // handleTapImageView 
+        title = "点击触发浏览大图模式"
+        handleTapBrower()
+    }
+    
+    fileprivate func handleTapBrower() {
         headImageView.handleTapBrower()
     }
+    
+    
 }
 

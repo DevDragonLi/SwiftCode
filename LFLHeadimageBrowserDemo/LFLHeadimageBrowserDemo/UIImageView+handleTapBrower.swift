@@ -7,30 +7,33 @@
 //
 
 import UIKit
-//import Photos
+import Photos
 
-private let LFLANIMATEDURATION = 0.3
+private let SHOWANIMATEDURATION = 0.25
 
 private var originFrame:CGRect = CGRect()
 
+
 extension UIImageView {
     
-    func handleTapBrower()  {
-        self.isUserInteractionEnabled = true
+    open func handleTapBrower()  {
+        if !self.isUserInteractionEnabled {
+            self.isUserInteractionEnabled = true
+        }
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapAction)))
     }
+    
     @objc fileprivate func saveCurrentImageClick()  {
-        
-        // 保存:目前有苹果的新 API问题,后期Photos 处理
-        UIImageWriteToSavedPhotosAlbum(self.image!, self, #selector(imageSave(image:didFinishSavingWithError:contextInfo:)), nil)
-    }
-    @objc fileprivate  func imageSave(image:UIImage,didFinishSavingWithError error:NSError?,contextInfo:AnyObject) {
-        // tips
+        // 权限校验
+        // 成功判别
+        try? PHPhotoLibrary.shared().performChangesAndWait {
+            PHAssetChangeRequest.creationRequestForAsset(from: self.image ?? UIImage.init())
+        }
     }
     
     @objc fileprivate func dismissAction(tap:UITapGestureRecognizer)  {
         let backgroundView = tap.view
-        UIView.animate(withDuration: LFLANIMATEDURATION, animations: {
+        UIView.animate(withDuration: SHOWANIMATEDURATION, animations: {
             backgroundView?.viewWithTag(1024)?.frame = originFrame
         }) { (complete) in
             backgroundView?.removeFromSuperview()
@@ -39,8 +42,11 @@ extension UIImageView {
     @objc fileprivate  func handleTapAction()  {
         
         let window = UIApplication.shared.keyWindow
+        
         let backgroundView = UIView(frame:UIScreen.main.bounds)
-        backgroundView.backgroundColor = UIColor.white
+        
+        backgroundView.backgroundColor = UIColor.clear
+        
         backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissAction(tap:))))
         originFrame = self.convert(self.bounds, to: window)
         
@@ -63,12 +69,14 @@ extension UIImageView {
         backgroundView.addSubview(showImageView)
         backgroundView.addSubview(saveButton)
         
-        UIView.animate(withDuration: LFLANIMATEDURATION) {
-            var yValue:CGFloat,width:CGFloat,Height :CGFloat = 0
-            Height = UIScreen.main.bounds.height - self.image!.size.height * (UIScreen.main.bounds.width / self.image!.size.width)
-            yValue = 300
+        UIView.animate(withDuration: SHOWANIMATEDURATION) {
+            var width:CGFloat = 0.0
+            var height:CGFloat = 0.0
+            height = UIScreen.main.bounds.height - self.image!.size.height * (UIScreen.main.bounds.width - 28 / self.image!.size.width)
             width = UIScreen.main.bounds.width;
-            showImageView.frame = CGRect(x: 0, y: yValue, width: width, height: Height)
+            showImageView.frame = CGRect(x: 0, y: 0, width: width, height: height)
+            showImageView.center = showImageView.superview!.center
+            originFrame = showImageView.frame
         }
     }
 }
