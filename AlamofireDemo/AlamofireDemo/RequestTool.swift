@@ -8,11 +8,10 @@
 
 import Alamofire
 
-
 class RequestTool {
-
-    private let testAPIURL = "http://api.budejie.com/api/api_open.php?a=list&c=data"
-
+    
+    private let testAPIURL = "https://api.budejie.com/api/api_open.php?a=list&c=data"
+    
     /// load test demo datas
     ///
     /// - Parameter complete: callblock
@@ -28,13 +27,14 @@ class RequestTool {
         //     默认的响应会放在主线程 ====>>>  自定义响应线程
         let networkingQueue = DispatchQueue.global(qos: .utility)
         
-        Alamofire.request(testAPIURL).responseJSON (queue: networkingQueue){ response in   // return self
+        
+        AF.request(testAPIURL).responseJSON (queue: networkingQueue){ response in   // return self
             // response.request ---> original URL request
             // response.response  --->HTTP URL response
             // response.data    ---> server back  datas
             // response.result   ---> result of response serialization  // serialization
             print( Thread.current)
-            if let JSON = response.result.value {  // 如果是被序列化的数据，就通过resonse中的result.value来获取数据
+            if let JSON :Result = response.result {  // 如果是被序列化的数据，就通过resonse中的result来获取数据
                 complete(JSON as AnyObject)
                 /*
                  response 直接返回HTTPResponse，未序列化
@@ -43,7 +43,7 @@ class RequestTool {
                  responseString 序列化为字符串
                  responsePropertyList 序列化为Any
                  */
-                
+
             }
         }
     }

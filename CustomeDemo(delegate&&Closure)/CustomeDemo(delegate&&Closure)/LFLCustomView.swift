@@ -12,7 +12,7 @@ import UIKit
 protocol CustomViewTapButtonDelegate:class {
     
     func buttonClickAction()
-
+    
 }
 
 class LFLCustomView: UIView {
@@ -22,7 +22,7 @@ class LFLCustomView: UIView {
     var bottomButton = UIButton(type: .custom)
     
     var tapButtonClosure : ((String) ->() )?
-
+    
     weak var delegate: CustomViewTapButtonDelegate?
     
     convenience init(labelTitle:String,Buttontitle:String,frame:CGRect) {
@@ -52,13 +52,12 @@ extension LFLCustomView{
     
     @objc func tapButtonHandle()  {
         print("frist part of closure\(#function)")
+        
         if self.tapButtonClosure != nil {
             self.tapButtonClosure?(self.bottomButton.currentTitle!)
         }
         // optional
         self.delegate?.buttonClickAction()
-        
-        
     }
 }
 

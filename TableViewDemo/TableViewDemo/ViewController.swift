@@ -13,7 +13,8 @@ fileprivate let cellID = "SampleTableViewCell"
 class ViewController: UIViewController {
     
     fileprivate  var sourceDatas = [String]()
-    fileprivate var loadPageDatas = [String]()
+    fileprivate  var loadPageDatas = [String]()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect(x: 0, y: 74, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         tableView.backgroundColor = .white
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .singleLine;
         //  tableView.register(SampleTableViewCell.classForCoder(), forCellReuseIdentifier: cellID)
-        
+
         tableView.register(UINib(nibName: "SampleTableViewCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.delegate = self
         tableView.dataSource = self
